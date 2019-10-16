@@ -106,3 +106,7 @@ $ ./ftest
 ```
 
 The matrix form being output is symmetrical, thank goodness!
+
+## ij\_count\_diffs
+
+The C source file, `ij_count_diffs.c`, contains an implementation of the integer vector comparator that includes vectorization for AVX/AVX2/AVX512.  As the dimension of the integer vectors increases, some time savings may be realized through vectorization.  The vectorization runs over all elements leading up to the first differing element of the two vectors; thereafter, index skew for the comparison necessitates the traditional algorithm.  Using the vectorized loop probably needs a minimum size check in the code:  only once N exceeds some threshold will it precede the traditional algorithm.
