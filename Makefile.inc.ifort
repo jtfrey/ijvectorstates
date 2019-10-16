@@ -1,0 +1,8 @@
+#
+# Intel compiler
+#
+FC		= ifort
+ARCHFLAG	= -m64 -xHOST
+FFLAGS		= -O3 -g -i8 -r8 $(ARCHFLAG)
+LDFLAGS		= $(ARCHFLAG)
+

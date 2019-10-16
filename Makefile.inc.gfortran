@@ -1,0 +1,8 @@
+#
+# GNU gfortran compiler
+#
+FC		= gfortran
+ARCHFLAG	= -m64
+FFLAGS		= -ffree-form -ffree-line-length-none
+LDFLAGS		= $(ARCHFLAG)
+
