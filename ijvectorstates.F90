@@ -150,7 +150,7 @@ Contains
         diffs = 0
 
         ! Loop over the two vectors simultaneously:
-        do while ((diffs < 3) .and. (Ii <= N) .and. (Ji < N))
+        do while ((diffs < 3) .and. (Ii <= N) .and. (Ji <= N))
             if (I(Ii) == J(Ji)) then
                 Ii = Ii + 1
                 Ji = Ji + 1
